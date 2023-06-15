@@ -1,0 +1,15 @@
+#include<iostream>
+#include<stdio.h>
+#include<stdlib.h>
+using namespace std;
+int main()
+{
+    char ch;
+    cout<<"Enter the value of ch: ";
+    cin>>ch;
+    if(isalpha(ch))
+        cout<<"Alphabet";
+    else if(isdigit(ch))
+        cout<<"Not an Alphabet";
+    return 0;
+}

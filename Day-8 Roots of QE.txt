@@ -1,0 +1,30 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main()
+{
+    int a,b,c;
+    float x1,x2;
+    cout<<"Enter the value of A : ";
+    cin>>a;
+    cout<<"Enter the value of B : ";
+    cin>>b;
+     cout<<"Enter the value of C : ";
+    cin>>c;
+    int d=(b*b- (4*a*c));
+    if(d>0)
+    {
+        x1=((-b+sqrt(d))/2*a);
+        x2=((-b-sqrt(d))/2*a);
+        cout<<"The roots are : "<<x1<<"and "<<x2;
+    }
+    if(d==0)
+    {
+        x1=-b/(2*a);
+        cout<<"The roots are equal"<<endl;
+        cout<<"Root 1 = Root 2 = "<<float(x1);
+    }
+    else
+        cout<<"INVALID NUMBER";
+    return 0;
+}
