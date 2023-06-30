@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n,count=0;
+    cout<<"Enter the number n : ";
+    cin>>n;
+    for(int i=1;i<n;i++)
+    {
+        if(n%i==0)
+            count++;
+        else
+            continue;
+    }
+    cout<<"The number of Prime factors are :"<<count<<endl;
+    if(count==2)
+        cout<<n<<" is a prime number....";
+    else
+        cout<<n<<" is not a prime number....";
+}

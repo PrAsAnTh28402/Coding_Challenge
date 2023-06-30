@@ -1,0 +1,48 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+int digits1(int n)
+{   int temp;
+    //temp=n;
+    while(n!=0)
+    {
+        if (n == 0)
+            return 1;
+        int count = 0;
+        while (n != 0) 
+        {
+         n = n / 10;
+            ++count;
+        }
+    return count;
+    }
+}
+int Armstrong(int num,int digits)
+{
+    int temp=num,sum=0,rem=0;
+    while(num!=0)
+    {
+        rem=num%10;
+        sum+=pow(rem,digits);
+        num/=10;
+    }
+    cout<<"The sum is : "<<sum<<endl;
+    if(sum==temp)
+        return 1;
+    else 
+        return 0;
+}
+int main()
+{
+    int n;
+    cout<<"Enter the value of n: ";
+    cin>>n;
+    int digits=digits1(n);
+    cout<<digits<<endl;
+    if(Armstrong(n,digits))
+        cout<<"The number is a Armstrong number.....";
+    else
+        cout<<"The number is not a Armstrong number...";
+    return 0;
+
+}

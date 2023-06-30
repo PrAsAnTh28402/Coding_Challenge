@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int x1,x2,x3,x4,x5,x6,gcd_no;
+    cout<<"Enter the numerator nd denominator of Num 1 : ";
+    cin>>x1>>x2;
+    cout<<"Enter the numerator nd denominator of Num 2 : ";
+    cin>>x3>>x4;
+    x5=(x1*x4)+(x2*x3);
+    x6=(x2*x4);
+     for(int c=1; c <= x5 && c <= x6; ++c)
+    {
+       if(x5%c==0 && x6%c==0)
+          gcd_no = c;
+    }
+    
+    cout<<x5/gcd_no<<"\t"<<x6/gcd_no;
+    return 0;
+    
+}
